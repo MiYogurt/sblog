@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SBlog · 分类与标签</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./static/css/categoryandtag.css">
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo shake shake-hard">
+      SBlog
+    </a>
+    <ul class="right_menu">
+      <li><a href="/all">所有文章</a></li>
+      <li><a href="/cate">分类与标签</a></li>
+      <!-- <li><a href="#">归档</a></li> -->
+      <li><a href="/friend">友情链接</a></li>
+      <li><a href="#">关于</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>分类与标签</h1>
+  </header>
+
+  <div class="container">
+    <div class="box cate">
+
+      <% category.forEach(function(item){ %>
+        <a href="/cate/<%= item.id %>" class="item">
+          <h1><%= item.name %></h1>
+          <p><%= item.description %></p>
+          <span class="count"><img src="./static/icon/book_count.png" alt="" class="small icon"> <%= item.posts.length %> 篇文章</span>
+        </a> 
+      <% }); %>
+      
+    </div>
+
+    <div class="box tag">
+
+      <% tag.forEach(function(item){ %>
+        <a href="/tag/<%= item.id %>" class="item"><%= item.name%></a>
+      <% }); %>
+      
+    </div>
+    
+
+  </div>
+  
+<%include ./footer.html%>
+</body>
+</html>

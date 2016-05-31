@@ -1,0 +1,49 @@
+@import main
+
+header h1
+  font-size 3em
+  text-align center
+  margin-top 1.5em
+
+.box
+  border-radius .2em
+  border 1px solid light_red
+  padding 1em
+  margin 2em 0px
+  background #fff
+  &.cate
+    .item
+      margin .5em 0
+      display block
+      background #fff
+      padding .5em
+      clear both
+      overflow hidden
+      border-radius .2em
+      color #9c9c9c
+      &:hover
+        background #eee
+      h1
+        font-size 3em
+        float left
+        margin 0
+      p
+        padding-left 7em
+        margin-bottom 1em
+      .count
+        float right
+  &.tag
+    overflow hidden
+    .item
+      display inline-block
+      text-align center
+      // float left
+      line-height 2em
+      color #fff
+      background #FF9D7B
+      box-shadow 0 2px 0 #D15260
+      height 2em
+      width 10em
+      margin .8em
+      border-radius .1em
+      

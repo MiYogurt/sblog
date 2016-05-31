@@ -1,0 +1,511 @@
+@import _vars
+@import normalize
+
+li
+  list-style-type none
+  
+a
+  text-decoration none
+  &:hover
+    color light_red !important
+    
+img.small.icon
+  width 1em
+  height 1em
+  top 0  
+img.icon
+  width 2em
+  height 2em
+  padding-right .5em
+  position relative
+  top .6em
+ul
+  padding 0
+  margin 0
+  
+body
+  background background_color
+  font-size 16px
+  padding 0
+  margin 0
+  
+
+/*导航栏*/
+nav
+  min-height (60/16)em
+  background #1F1F1F
+  clear both
+  
+  a
+    position relative
+    font-size 1em
+    text-decoration none
+    display inline-block
+    padding-top 1.3em
+    color #fff
+    &:hover
+      color light_red
+    &.logo
+      padding-left 6.3em
+      font-size 1.5em
+      padding-top .7em
+      padding-bottom .8em
+      &::before
+        display: block
+        top: 0
+        left: 2em
+        position: absolute
+        width: 4em
+        height: 4em
+        content: ""
+        background url('../../logo.png') no-repeat
+        background-size: 100%
+  .right_menu
+    float right
+    padding-right 2em
+    margin-bottom 0
+    li
+      display inline-block
+      padding-right 2em
+      
+/*头部*/
+header
+  background light_red
+  width 100%
+  min-height (200/16)em
+  clear both
+  overflow hidden
+  color #fff
+  section
+    display inline-block
+    &.about
+      padding-left 4em
+      h2
+        font-size 3em
+        padding-bottom .3em
+    &:nth-child(2)
+      float right
+      padding-right 4em
+      padding-top 4.5em
+      
+      form input
+        display block
+        border-radius .1em
+        border none
+        outline none
+        color #fff
+        padding .1em 1em
+        &.sub_input
+          background #AE373E
+          width (210/16)em
+          height (35/16)em
+        &.sub_submit
+          background #E95C63
+          margin-top .5em
+          margin-bottom .5em
+          width (120/16)em
+          height (35/16)em
+          cursor pointer
+          &:hover
+            background #E77278
+            
+.container
+  padding 0 4em
+  
+.random_link 
+  width 100%
+  clear both
+  overflow hidden
+  div
+    margin-top .5em
+    border 1px solid deep_red
+    background #fff
+    border-radius .2em
+    height (250/16)em
+    h4
+      margin-top .5em
+      margin-bottom 0
+      padding-bottom .5em
+      text-align center
+      border-bottom: 1px solid #eee
+  .random_cate
+    display inline-block
+    float left
+    width 22%
+    ul
+      text-align center
+      li
+        display inline-block
+        padding .2em
+        background #eee
+        border-radius 1em
+        width 80%
+        height 2em
+        line-height 2em
+        text-align center
+        margin .45em
+        a
+          display inline-block
+          width 100%
+          height 100%
+          text-decoration none
+          color #9c9c9c
+  .random_post
+    width auto
+    margin-left 24%
+    ul
+      text-align left
+      li
+        display block
+        line-height 2em
+        padding .1em 2em
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        a
+          color #9c9c9c
+      
+.article_container
+  margin 1em 0
+  width 100%
+  article
+    position relative
+    margin 1em 0
+    div
+      background: #fff
+    .title
+      display: block
+      padding: 20px
+      width: 80%
+      position: absolute
+      border-radius .1em
+      top 30%
+      left 50%
+      margin-left -43%
+      z-index 9
+      a
+        color #1a1a1a
+      h3
+        font-size 1.5em
+        padding-bottom .5em
+      .description a
+        padding-right 1em
+        font-size .8em
+    .img_container
+      width 100%
+    .info
+      padding 4em 2em 1em 2em
+      line-height 1.7em
+      border-bottom 1px dotted #eee
+    .footer
+      padding .5em 2em
+      .btn
+        text-align center
+        display inline-block
+        width 6em
+        background #FF9D7B
+        height 2em
+        line-height 2em
+        color #fff
+        border-radius .1em
+      .right
+        float right
+        line-height 2em
+        
+
+/*页脚*/
+footer.page
+  height (170/16)em
+  width 100%
+  background #2D2E40 url('../../foot_bg.png') no-repeat
+  clear both
+  color #fff
+  text-align center
+  a 
+    text-decoration none
+    color #fff
+    margin-right 2.5em
+    display inline-block
+    margin-top .2em
+    &:hover
+      color light_red
+  h3
+    font-size 1.5em
+  .copyright
+    float left
+    padding-left 4em
+    text-align left
+    img:first-of-type
+      position relative
+      top .75em
+    div
+      display block
+      float right
+      padding 0 2em 0 1em
+  .navigation
+    display inline-block
+    text-align left
+    li
+      display inline-block
+       
+  .sharing
+    float right
+    text-align left
+    padding-right 4em
+    a
+      display block
+      &:first-of-type
+        margin-top -1em
+  
+  img[src$="bq.png"]
+    width (88/16)em
+    height (31/16)em
+  
+
+@media screen and (max-width: 750px)
+  header h1
+    font-size 2.5em !important
+  nav
+    overflow hidden
+    text-align center
+    a.logo
+      padding-top 1em
+    .right_menu
+      padding-right 0
+      padding-top 1em
+      float none
+      display block
+      li
+        padding-right 1em
+        font-size .8em
+        a
+          padding-top .5em 
+          padding-bottom .5em
+  .box.cate .item p
+    padding-left 0 !important
+  .box.tag .item
+    display block !important
+    width auto !important
+        
+@media screen and (max-width: 1330px)
+  footer.page
+    a 
+      text-decoration none
+      color #fff
+      margin-right 2em
+    .copyright
+      display none
+
+@media screen and (max-width: 890px)
+
+  .img_container
+    display none
+  .article_container article .title
+    position relative
+    left 0
+    top 0
+    margin-left 0
+    width 100%
+    padding 0
+    h3
+      padding 1em 2em
+    .description
+      a
+        line-height 2em
+      padding 1em 2em
+  .article_container article .info
+    padding 1em 2em 1em 3em
+  .container
+    padding 0 1em
+  .random_link 
+    .random_cate,.random_post
+      float none
+      display block
+      margin .5em 0
+  .random_link .random_cate
+    display block
+    width 99.6%
+  footer.page
+    h3
+      padding-top .5em
+    a
+      font-size .8em
+      margin-right 1em
+      margin-left 1em
+    .navigation
+      li a
+        margin-bottom 1em
+        margin-right 0
+    .sharing
+      display none
+
+@media screen and (max-width: 810px)
+  header
+    text-align center
+    section
+      display block
+      
+      &.about
+        padding-left 0
+      &:nth-child(2)
+        padding-right 0
+        padding-top .2em
+        padding-left .2em
+        padding-right .2em
+        float none
+        form input
+          display inline-block
+
+// 分页样式
+.pagination
+  text-align center
+  padding .5em
+  li
+    display inline-block
+    background #fff
+    &.active
+      background-color #efefef
+    &:hover
+      background-color #efefef
+    a
+      display inline-block
+      padding 1em 1.5em
+      &:hover
+        color #000 !important
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * *\  
+  CSShake :: shake-hard
+  v1.5.0
+  CSS classes to move your DOM
+  (c) 2015 @elrumordelaluz
+  http://elrumordelaluz.github.io/csshake/
+  Licensed under MIT
+\* * * * * * * * * * * * * * * * * * * * */
+.shake-hard {
+  display: inline-block;
+  transform-origin: center center; }
+
+.shake-freeze,
+.shake-constant.shake-constant--hover:hover,
+.shake-trigger:hover .shake-constant.shake-constant--hover {
+  animation-play-state: paused; }
+
+.shake-freeze:hover,
+.shake-trigger:hover .shake-freeze, .shake-hard:hover,
+.shake-trigger:hover .shake-hard {
+  animation-play-state: running; }
+
+@keyframes shake-hard {
+  2% {
+    transform: translate(-4px, 2px) rotate(1.5deg); }
+  4% {
+    transform: translate(-4px, 5px) rotate(3.5deg); }
+  6% {
+    transform: translate(-8px, -7px) rotate(0.5deg); }
+  8% {
+    transform: translate(1px, 10px) rotate(-0.5deg); }
+  10% {
+    transform: translate(2px, -6px) rotate(-0.5deg); }
+  12% {
+    transform: translate(1px, -4px) rotate(2.5deg); }
+  14% {
+    transform: translate(-5px, -8px) rotate(1.5deg); }
+  16% {
+    transform: translate(3px, -4px) rotate(1.5deg); }
+  18% {
+    transform: translate(-7px, -2px) rotate(-2.5deg); }
+  20% {
+    transform: translate(9px, -2px) rotate(-0.5deg); }
+  22% {
+    transform: translate(-3px, 2px) rotate(-1.5deg); }
+  24% {
+    transform: translate(2px, -7px) rotate(-1.5deg); }
+  26% {
+    transform: translate(-6px, -7px) rotate(-1.5deg); }
+  28% {
+    transform: translate(2px, -3px) rotate(3.5deg); }
+  30% {
+    transform: translate(-8px, 2px) rotate(-2.5deg); }
+  32% {
+    transform: translate(-5px, 5px) rotate(0.5deg); }
+  34% {
+    transform: translate(5px, 5px) rotate(3.5deg); }
+  36% {
+    transform: translate(-8px, -2px) rotate(2.5deg); }
+  38% {
+    transform: translate(5px, 1px) rotate(-2.5deg); }
+  40% {
+    transform: translate(-9px, 5px) rotate(3.5deg); }
+  42% {
+    transform: translate(6px, -7px) rotate(-2.5deg); }
+  44% {
+    transform: translate(-8px, -9px) rotate(-1.5deg); }
+  46% {
+    transform: translate(7px, 10px) rotate(-1.5deg); }
+  48% {
+    transform: translate(3px, 2px) rotate(3.5deg); }
+  50% {
+    transform: translate(-7px, -4px) rotate(2.5deg); }
+  52% {
+    transform: translate(0px, 8px) rotate(-1.5deg); }
+  54% {
+    transform: translate(0px, 9px) rotate(0.5deg); }
+  56% {
+    transform: translate(0px, -4px) rotate(3.5deg); }
+  58% {
+    transform: translate(9px, -6px) rotate(0.5deg); }
+  60% {
+    transform: translate(-1px, -1px) rotate(1.5deg); }
+  62% {
+    transform: translate(-3px, -9px) rotate(1.5deg); }
+  64% {
+    transform: translate(-2px, 10px) rotate(1.5deg); }
+  66% {
+    transform: translate(10px, -3px) rotate(0.5deg); }
+  68% {
+    transform: translate(2px, 9px) rotate(0.5deg); }
+  70% {
+    transform: translate(-1px, 4px) rotate(-0.5deg); }
+  72% {
+    transform: translate(-3px, 3px) rotate(2.5deg); }
+  74% {
+    transform: translate(-6px, 2px) rotate(1.5deg); }
+  76% {
+    transform: translate(4px, -4px) rotate(-1.5deg); }
+  78% {
+    transform: translate(3px, -1px) rotate(3.5deg); }
+  80% {
+    transform: translate(4px, -4px) rotate(2.5deg); }
+  82% {
+    transform: translate(-6px, 3px) rotate(0.5deg); }
+  84% {
+    transform: translate(4px, 3px) rotate(-2.5deg); }
+  86% {
+    transform: translate(1px, 6px) rotate(3.5deg); }
+  88% {
+    transform: translate(-9px, 10px) rotate(1.5deg); }
+  90% {
+    transform: translate(8px, -7px) rotate(0.5deg); }
+  92% {
+    transform: translate(2px, -8px) rotate(-0.5deg); }
+  94% {
+    transform: translate(-4px, -1px) rotate(3.5deg); }
+  96% {
+    transform: translate(-9px, -6px) rotate(3.5deg); }
+  98% {
+    transform: translate(-3px, -2px) rotate(-1.5deg); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake-hard:hover,
+.shake-trigger:hover .shake-hard,
+.shake-hard.shake-freeze,
+.shake-hard.shake-constant {
+  animation-duration: 100ms;
+  animation-iteration-count: infinite;
+  animation-name: shake-hard;
+  animation-timing-function: ease-in-out; }          
+          

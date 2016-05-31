@@ -1,0 +1,1 @@
+think.UPLOAD_PATH = think.RESOURCE_PATH + "/static/upload";

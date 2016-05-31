@@ -1,0 +1,82 @@
+@startuml
+title SBlog Databases Design
+
+scale 1200 * 1200
+skinparam {
+  dip 300
+  defaultFontName Fira Code
+}
+
+'文章集
+class posts {
+  🔴 id int
+  --
+  🔵 category_id
+  --
+  title varchar(255)
+  --
+  description varchar(255)
+  --
+  photograph_url varchar(255)
+  --
+  content text
+  --
+  read_count integer
+  --
+  music_url varchar(255)
+  --
+  like_count integer
+  --
+  publish_time date
+  --
+  created_time date
+}
+
+class comments{
+  🔴 id int
+  --
+  🔵 post_id
+  --
+  email varchar(255)
+  --
+  usernmae varchar(255)
+  --
+  content text
+}
+
+class categorys{
+  🔴 id int
+  --
+  description varchar(255)
+  --
+  name varchar(255)
+}
+
+class tags{
+  🔴 id int
+  --
+  name varchar(255)
+}
+
+class posts_tags{
+  🔵 post_id
+  --
+  🔵 tag_id
+}
+
+class site_config{
+  🔴 id int
+  --
+  key varchar(255)
+  --
+  value text
+}
+
+
+category "one" --- "many" posts
+posts "one" --- "many" comments
+tags "many" --- "many" posts
+(posts,tags) --- post_tag
+
+
+@enduml

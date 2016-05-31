@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SBlog</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../static/css/list.css">
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo shake shake-hard">
+      SBlog
+    </a>
+    <ul class="right_menu">
+      <li><a href="/all">所有文章</a></li>
+      <li><a href="/cate">分类与标签</a></li>
+      <!-- <li><a href="#">归档</a></li> -->
+      <li><a href="/friend">友情链接</a></li>
+      <li><a href="/about">关于</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>标签 /<%= cate.name %></h1>
+    <p><%= cate.description %></p>
+  </header>
+
+  <div class="container list">
+    <% if ( cate.posts.length ==0 ){ %>
+        <div style="padding: 6em 7em;text-align: center;font-size: 2em;">这个标签里面没有任何内容哦！</div>
+      <% } %>
+
+    <% cate.posts.forEach(function(item){ %>
+        <a href="../post/<%= item.id %>" class="item">
+          <h1 class="title"><%= item.title %></h1>
+          <p class="sub_title">共计<%= item.content.length %>字 · <%= item.read_count %>阅读 · <%= item.comments.length %> 回复 <span class="right">于 <%= item.publish_time %> 发布</span></p>
+        </a>
+      <% }); %>
+
+  </div>
+  
+<%include ./footer.html%>
+</body>
+</html>

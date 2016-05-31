@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SBlog</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./static/css/main.css">
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo shake shake-hard">
+      SBlog
+    </a>
+    <ul class="right_menu">
+      <li><a href="/all">所有文章</a></li>
+      <li><a href="/cate">分类与标签</a></li>
+      <!-- <li><a href="#">归档</a></li> -->
+      <li><a href="/friend">友情链接</a></li>
+      <li><a href="/about">关于</a></li>
+    </ul>
+  </nav>
+  <header>
+    <section class="about">
+      <h2>Hello Visitor.</h2>
+      <p>我的名字叫季晨峰，欢迎来到我的小小博客（Small Blog）</p>
+    </section>
+    <section>
+      <form>
+        <input type="text" class="sub_input" name="email" />
+        <input type="submit" class="sub_submit" value="邮件订阅">
+      </form>
+    </section>
+  </header>
+
+  <div class="container">
+    <aside class="random_link">
+      <div class="random_cate">
+        <h4>随机分类导航</h4>
+        <ul>
+        <% r_cate.forEach(function(item){ %>
+          <li><a href="/cate/<%= item.id %>"><%= item.name %></a></li>
+        <% }); %>
+        </ul>
+      </div>
+      <div class="random_post">
+        <h4>随机文章推荐</h4>
+        <ul>
+        <% r_post.forEach(function(item){ %>
+          <li><a href="/post/<%= item.id %>"><%= item.title %></a></li>
+        <% }); %>
+        </ul>
+      </div>
+    </aside>
+    
+    <div class="article_container">
+        <% post.forEach(function(item){ %>
+          <article>
+            <div class="img_container" style="background: <% if(item.photograph_url==''){ %> <%= getRandomColor()%> <%}%> url(<%= item.photograph_url %>) center center no-repeat; background-size: cover;width: 100%;height: 200px;"></div>
+            <div class="title">
+              <a href="/post/<%= item.id %>"><h3 class="article_title"><%= item.title %></h3></a>
+              <div class="description">
+                <a href="javascript:;"><img class="small icon" src="./static/icon/face.png" />yugo</a>
+                <a href="/cate/<%= item.category_id %>"><img class="small icon" src="./static/icon/opened_folder.png" /><%= item.category_name %></a>
+                <a href="javascript:;"><img class="small icon" src="./static/icon/planner.png" /><%= item.publish_time %></a>
+                <a href="/post/<%= item.id %>#comment"><img class="small icon" src="./static/icon/topic.png" />评论</a>
+              </div>
+            </div>
+            <div class="info">
+              <%= item.description %>
+            </div>
+            <%
+              function getRandomColor(){ 
+                return "#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6); 
+              } 
+            %>
+            <div class="footer" style="border-bottom: 2px solid <%= getRandomColor()%>">
+              <a href="/post/<%= item.id %>" class="btn">阅读</a>
+              <a href="#" class="right">分享</a>
+            </div>
+          </article>
+        <% }); %>
+
+    </div>
+    
+
+  </div>
+  
+<%include ./footer.html%>
+</body>
+</html>

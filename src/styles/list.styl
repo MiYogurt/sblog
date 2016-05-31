@@ -1,0 +1,41 @@
+@import main
+
+header 
+  text-align center
+  h1
+    font-size 3em
+    margin-top 1.3em
+
+.container.list
+  padding 2em 4em
+  min-height 500px
+a.item
+  display block
+  padding .5em 1em
+  background #fff
+  border 1px dotted light_red
+  color #1a1a1a
+  margin 1em
+  border-radius .2em
+  &:hover
+    border 1px solid light_red
+  .title
+    font-size 1.4em
+    line-height 1.4em
+    margin .3em 0
+a.item
+    font-size .8em
+    margin .3em 
+    .right
+      float right
+      font-size .8em
+
+
+@media screen and (max-width: 750px)
+  .container.list
+    padding 0 1em 
+  a.item
+    margin .5em .1em
+    .right
+      display block
+      float none

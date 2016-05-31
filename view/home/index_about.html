@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SBlog</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./static/css/about.css">
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo shake shake-hard">
+      SBlog
+    </a>
+    <ul class="right_menu">
+      <li><a href="/all">所有文章</a></li>
+      <li><a href="/cate">分类与标签</a></li>
+      <!-- <li><a href="#">归档</a></li> -->
+      <li><a href="/friend">友情链接</a></li>
+      <li><a href="/about">关于</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>关于</h1>
+    <div class="label_group">
+      <a href="javascript:;" class="label" id="me">博主简历</a>
+      <a href="javascript:;" class="label" id="site">关于本站</a>
+      <a href="javascript:;" class="label" id="contact">联系方式</a>
+    </div>
+  </header>
+
+  <div class="container about">
+      <div id="me_container">
+        <div class="info">
+          <img src="./static/icon/myAvatar.png" alt="" class="face">
+          <div>
+          <%- concat_me.value %>
+            
+          </div>
+        </div>
+        <div class="description">
+        <%- about_me.value %>
+        </div>
+
+      </div>
+      <div id="site_container">
+        <%- about_site.value %>
+      </div>
+      <div id="contact_container">
+        <%- concat_me.value %>
+      </div>
+  </div>
+  
+<%include ./footer.html%>
+
+<script type="text/javascript">
+    var $me = document.getElementById('me');
+    var $site = document.getElementById('site');
+    var $contact = document.getElementById('contact');
+    var $m_container = document.getElementById('me_container');
+    var $s_container = document.getElementById('site_container');
+    var $c_container = document.getElementById('contact_container');
+
+    $me.addEventListener('click',function() {
+      $m_container.style.display = 'block';
+      $s_container.style.display = 'none';
+      $c_container.style.display = 'none';
+    });    
+    $site.addEventListener('click',function() {
+      $m_container.style.display = 'none';
+      $s_container.style.display = 'block';
+      $c_container.style.display = 'none';
+
+    });
+    $contact.addEventListener('click',function() {
+      $m_container.style.display = 'none';
+      $s_container.style.display = 'none';
+      $c_container.style.display = 'block';
+    });
+
+</script>
+</body>
+</html>

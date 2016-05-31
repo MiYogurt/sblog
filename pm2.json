@@ -1,0 +1,16 @@
+{
+  "apps": [{
+    "name": "SBlog",
+    "script": "www/production.js",
+    "cwd": "/Users/Yugo/Documents/workspace/SBlog",
+    "exec_mode": "cluster",
+    "instances": 0,
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}

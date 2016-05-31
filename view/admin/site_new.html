@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+
+<!-- Meta information -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<!-- Title-->
+<title>小小博客 |  管理后台</title>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../static/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../static/assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../static/assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="../../static/assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="../../static/assets/ico/favicon.ico">
+
+<!-- CSS Stylesheet-->
+<link type="text/css" rel="stylesheet" href="../../static/assets/css/bootstrap/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="../../static/assets/css/bootstrap/bootstrap-themes.css" />
+<link type="text/css" rel="stylesheet" href="../../static/assets/css/style.css" />
+
+<!-- Styleswitch if  you don't chang theme , you can delete -->
+<link type="text/css" rel="alternate stylesheet" media="screen" title="style1" href="../../static/assets/css/styleTheme1.css" />
+<link type="text/css" rel="alternate stylesheet" media="screen" title="style2" href="../../static/assets/css/styleTheme2.css" />
+<link type="text/css" rel="alternate stylesheet" media="screen" title="style3" href="../../static/assets/css/styleTheme3.css" />
+<link type="text/css" rel="alternate stylesheet" media="screen" title="style4" href="../../static/assets/css/styleTheme4.css" />
+<link rel="stylesheet" type="text/css" href="../../static/wedit/css/wangEditor.min.css">
+</head>
+<body class="nav-collapse-in">
+<div id="wrapper">
+        <!--
+        /////////////////////////////////////////////////////////////////////////
+        //////////     HEADER  CONTENT     ///////////////
+        //////////////////////////////////////////////////////////////////////
+        -->
+        <div id="header">
+        
+                <div class="logo-area clearfix">
+                        <a href="#" class="logo" style="background: transparent;font-size: 30px;line-height: 50px;color:#fff">SBlog</a>
+                </div>
+                <!-- //logo-area-->
+                
+                <div class="tools-bar">
+                        <ul class="nav navbar-nav nav-main-xs">
+                                <li><a href="#menu" class="icon-toolsbar"><i class="fa fa-bars"></i></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right tooltip-area">
+                                <li><a href="#menu-right" data-toggle="tooltip" title="Right Menu" data-container="body" data-placement="left"><i class="fa fa-align-right"></i></a></li>
+                                
+                                <li><a href="#" class="nav-collapse avatar-header" data-toggle="tooltip" title="Show / hide  menu" data-container="body" data-placement="bottom">
+                                                <img alt="" src="../../face.png"  class="circle">
+                                                <span class="badge"></span>
+                                        </a>
+                                </li>
+                                <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                            <em><strong>你好</strong>, 管理员 </em>
+                                        </a>
+                                        
+                                </li>
+                                <li class="visible-lg">
+                                    <a href="#" class="h-seperate fullscreen" data-toggle="tooltip" title="Full Screen" data-container="body"  data-placement="left">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                </li>
+                        </ul>
+                </div>
+                <!-- //tools-bar-->
+                
+        </div>
+        <!-- //header-->
+        
+        
+        <!--
+        /////////////////////////////////////////////////////////////////////////
+        //////////     SLIDE LEFT CONTENT     //////////
+        //////////////////////////////////////////////////////////////////////
+        -->
+        <div id="nav">
+                <div id="nav-scroll">
+                        <div class="avatar-slide">
+                        
+                                <span class="avatar-chart">
+                                        <img alt="" src="../../face.png" class="circle">
+                                </span>
+                                <!-- //avatar-chart-->
+                                
+                                <div class="avatar-detail">
+                                        <p><strong>你好</strong>, 管理员</p>
+                                </div>
+                                <!-- //avatar-detail-->
+                                
+                                <div class="avatar-link btn-group btn-group-justified">
+                                        <a class="btn" href="#menu-right" title="Contact List"><i class="fa fa-book"></i></a>
+                                </div>
+                                <!-- //avatar-link-->
+                                
+                        </div>
+                        <!-- //avatar-slide-->
+                    
+                        
+                        
+                </div>
+                <!-- //nav-scroller-->
+        </div>
+        <!-- //nav-->
+        
+        
+        
+        
+        <!--
+        /////////////////////////////////////////////////////////////////////////
+        //////////     MAIN SHOW CONTENT     //////////
+        //////////////////////////////////////////////////////////////////////
+        -->
+        <div id="main">
+
+                <ol class="breadcrumb">
+                        <li><a href="#">控制台</a></li>
+                        <li><a href="#">分类</a></li>
+                </ol>
+                <!-- //breadcrumb-->
+
+                <div id="content">
+                            <h1>新建一个配置项</h1>
+                            <div class="divider"></div>
+                            <form action="/admin/site/post/" method="post">
+                                <input type="text" name="key" value="" style="width: 100%;margin-bottom: 5px;" placeholder="名称">
+                                <textarea id="body_content" name="value" style="width: 100%; height: 200px;padding: 5px;margin-bottom: 5px;" placeholder="值"></textarea>
+                                <input type="submit" value="提交" class="pull-right btn btn-xs btn-primary" style="margin-top: 5px;">
+                            </form>
+                       
+
+
+                         
+                        
+                </div>
+                <!-- //content-->
+                
+                
+                
+        </div>
+        <!-- //main-->
+        
+        
+        <!--
+        //////////////////////////////////////////////////////////////
+        //////////     LEFT NAV MENU     //////////
+        ///////////////////////////////////////////////////////////
+        -->
+        <%include ./menu.html%>
+        <!-- //nav left menu-->
+        
+        
+                <!--
+        /////////////////////////////////////////////////////////////////
+        //////////     RIGHT NAV MENU     //////////
+        /////////////////////////////////////////////////////////////
+        -->
+        <nav id="menu-right">
+                <ul>
+                        <li class="Label label-lg">Theme color</li>
+                        <li>
+                            <span class="text-center">
+                                <div id="style1" class="color-themes col1"></div>
+                                <div id="style2" class="color-themes col2" ></div>
+                                <div id="style3" class="color-themes col3" ></div>
+                                <div id="style4" class="color-themes col4" ></div>
+                                <div id="none" class="color-themes col5" ></div>
+                            </span>
+                        </li>
+                </ul>
+        </nav>
+        <!-- //nav right menu-->
+        
+        
+</div>
+<!-- //wrapper-->
+
+
+<!--
+////////////////////////////////////////////////////////////////////////
+//////////     JAVASCRIPT  LIBRARY     //////////
+/////////////////////////////////////////////////////////////////////
+-->
+        
+<!-- Jquery Library -->
+<script type="text/javascript" src="../../static/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/assets/js/jquery.ui.min.js"></script>
+<script type="text/javascript" src="../../static/assets/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- Modernizr Library For HTML5 And CSS3 -->
+<script type="text/javascript" src="../../static/assets/js/modernizr/modernizr.js"></script>
+<script type="text/javascript" src="../../static/assets/plugins/mmenu/jquery.mmenu.js"></script>
+<script type="text/javascript" src="../../static/assets/js/styleswitch.js"></script>
+<script type="text/javascript" src="../../static/assets/js/styleswitch.js"></script>
+<!-- Library 10+ Form plugins-->
+<script type="text/javascript" src="../../static/assets/plugins/form/form.js"></script>
+<!-- Datetime plugins -->
+<script type="text/javascript" src="../../static/assets/plugins/datetime/datetime.js"></script>
+<!-- Library Chart-->
+<script type="text/javascript" src="../../static/assets/plugins/chart/chart.js"></script>
+<!-- Library  5+ plugins for bootstrap -->
+<script type="text/javascript" src="../../static/assets/plugins/pluginsForBS/pluginsForBS.js"></script>
+<!-- Library 10+ miscellaneous plugins -->
+<script type="text/javascript" src="../../static/assets/plugins/miscellaneous/miscellaneous.js"></script>
+<!-- Library Themes Customize-->
+<script type="text/javascript" src="../../static/assets/js/caplet.custom.js"></script>
+<script type="text/javascript" src="../../static/wedit/js/wangEditor.min.js"></script>
+
+<script type="text/javascript">
+    var editor = new wangEditor('body_content');
+
+    editor.config.uploadImgUrl = '/upload';
+
+    editor.create();
+
+</script>
+
+</body>
+</html>
